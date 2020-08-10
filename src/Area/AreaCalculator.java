@@ -1,3 +1,5 @@
+package Area;
+
 public class AreaCalculator {
     public static void main(String[] args) {
         double result1=area(3.5);
