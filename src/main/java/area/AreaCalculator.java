@@ -1,4 +1,4 @@
-package Area;
+package main.java.area;
 
 public class AreaCalculator {
     public static void main(String[] args) {
