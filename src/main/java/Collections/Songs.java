@@ -5,7 +5,7 @@ public class Songs {
     private String songName;
     private double duration;
 
-    public Songs(String songName, int duration) {
+    public Songs(String songName, double duration) {
         this.songName = songName;
         this.duration = duration;
     }

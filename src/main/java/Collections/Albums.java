@@ -13,8 +13,9 @@ public class Albums {
             if (album.size() == 0) {
                 add();
             } else {
-                System.out.print(" Enter 1 to add songs : \n"
-                        + "Enter 0 to exit : ");
+                System.out.println("\tEnter 1 to add songs \n"
+                        + "\tEnter 0 to exit ");
+                System.out.print("Enter choice : ");
                 int input = takeInput.nextInt();
                 takeInput.nextLine();
                 switch (input) {
@@ -33,15 +34,12 @@ public class Albums {
     }
 
     public void add() {
-
         System.out.print("Enter the song name : ");
         String name = takeInput.nextLine();
         System.out.print("Enter its duration : ");
-        int time = takeInput.nextInt();
-        album.add(new Songs(name, time));
+        double time = takeInput.nextDouble();
+        album.add(new Songs(name,time));
         System.out.println("Successfully added");
-
-
     }
 
     public void removeSongs() {
@@ -56,22 +54,31 @@ public class Albums {
     public void printSongs(ArrayList<Songs> songslist) {
         System.out.println("List of the songs :");
         for (int i = 0; i < songslist.size(); i++) {
-            System.out.println((i + 1) + ". " + songslist.get(i).getSongName());
+            System.out.println((i + 1) + ". " + songslist.get(i).getSongName()+ " "+ songslist.get(i).getDuration());
         }
     }
 
     public void action() {
-        System.out.println("Enter 0 to Exit ! \n" + "Enter 1 to add songs \n" +
-                "Enter 2 to delete a song"
-        );
+        System.out.println("Enter 0 to Exit  \n" + "Enter 1 to add songs \n" +
+                "Enter 2 to delete a song \n"
+        +"Enter 3 to view songs");
+        System.out.print("Enter choice : ");
         int input = takeInput.nextInt();
         takeInput.nextLine();
+
         switch (input) {
             case 0:
                 System.out.println("Your changes has been made");
                 break;
             case 1:
                 addSongs();
+                break;
+            case 2:
+                removeSongs();
+                break;
+            case 3:
+                printSongs(album);
+                action();
                 break;
         }
     }
