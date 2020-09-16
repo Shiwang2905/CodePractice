@@ -7,6 +7,5 @@ public class Run {
         nokia.dial(12345);
         nokia.call(12345);
         nokia.isRinging(12345);
-
     }
 }

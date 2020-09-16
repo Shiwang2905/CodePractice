@@ -1,3 +1,5 @@
+package main.java.SmallCodes;
+
 public class Result {
     public static void main(String[] args) {
         Carpet c=new Carpet(3.5);

@@ -1,3 +1,5 @@
+package main.java.SmallCodes;
+
 public class Carpet {
     private double cost;
 

@@ -1,3 +1,5 @@
+package main.java.SmallCodes;
+
 public class Calculator {
     private Floor floor;
     private Carpet carpet;

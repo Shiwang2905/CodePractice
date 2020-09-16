@@ -1,3 +1,5 @@
+package main.java.SmallCodes;
+
 public class Floor {
     private double width;
     private double length;
